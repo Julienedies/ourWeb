@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+
+  "name": "ourWeb",
+  "description": "让我们每个人都能轻松对web page进行编辑并把编辑结果分享给所有人",
+  "version": "1.0",
+
+  "permissions": [
+  	"tabs",
+  	"contextMenus",
+  	"downloads",  
+  	"storage",
+  	"\u003Call_urls\u003E",
+    "http://*/*"
+  ],
+  
+  "background": { "scripts": ["assets/js/libs/jquery.min.js","assets/js/background.js"],
+  				  "pages": ["background.html"]
+  				   },
+
+
+  "content_scripts": [  
+  	{  
+    	"matches": ["http://*/*"],
+    	"js": ["assets/js/libs/underscore.js","assets/js/libs/jquery.min.js","assets/js/content_script.js"]  
+ 	 }  
+  ],  
+
+  
+  "icons": {
+          "16": "assets/img/icon-bitty.png",
+          "48": "assets/img/icon-small.png",
+          "128": "assets/img/icon-large.png"
+   },
+   
+  "browser_action": {
+    "default_icon": "assets/img/icon-large.png",
+    "default_popup": "popup.html",
+    "default_title": "让我们每个人都能轻松对web page进行编辑并把编辑结果分享给所有人"
+  }
+}

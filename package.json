@@ -1,0 +1,10 @@
+{
+    "name": "ourWeb",
+    "version": "0.1.0",
+    "description": "让我们每个人都能轻松对web page进行编辑并把编辑结果分享给所有人",
+    "devDependencies": {
+        "fis":"1.8.6",
+        "fis-postpackager-simple":"0.0.18"
+    },
+    "scripts": {}
+}
